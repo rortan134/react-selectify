@@ -1,26 +1,26 @@
-![use-selectify cover image](https://raw.githubusercontent.com/rortan134/use-selectify/master/.github/assets/use-selectify-banner.png)
+![react-selectify cover image](https://raw.githubusercontent.com/rortan134/react-selectify/master/.github/assets/react-selectify-banner.png)
 
-<h1 align="center">use-selectify</h1>
+<h1 align="center">react-selectify</h1>
 
-<p align="center">The ultimate drag-to-select solution for React. Designed to be fast; Built to be accessible.</p>
+<p align="center">The ultimate drag-to-select solution for React: Unstyled. Fast. Accessible. API inspired by [Radix-UI](https://radix-ui.com/).</p>
 <p align="center">
-  <a href="https://github.com/rortan134/use-selectify/blob/main/CONTRIBUTING.md">
+  <a href="https://github.com/rortan134/react-selectify/blob/main/CONTRIBUTING.md">
     <img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-blue.svg" />
   </a>
-  <a href="https://www.npmjs.com/package/use-selectify">
-    <img alt="Types Included" src="https://badgen.net/npm/types/use-selectify" />
+  <a href="https://www.npmjs.com/package/react-selectify">
+    <img alt="Types Included" src="https://badgen.net/npm/types/react-selectify" />
   </a>
-  <a href="https://bundlephobia.com/result?p=use-selectify">
-    <img alt="Minizipped Size" src="https://img.shields.io/bundlephobia/minzip/use-selectify" />
+  <a href="https://bundlephobia.com/result?p=react-selectify">
+    <img alt="Minizipped Size" src="https://img.shields.io/bundlephobia/minzip/react-selectify" />
   </a>
-  <a href="https://github.com/rortan134/use-selectify/blob/main/LICENSE">
-    <img alt="MIT License" src="https://badgen.net/github/license/rortan134/use-selectify" />
+  <a href="https://github.com/rortan134/react-selectify/blob/main/LICENSE">
+    <img alt="MIT License" src="https://badgen.net/github/license/rortan134/react-selectify" />
   </a>
-  <a href="https://www.npmjs.com/package/use-selectify">
-    <img alt="Package Version" src="https://img.shields.io/npm/v/use-selectify.svg?colorB=green" />
+  <a href="https://www.npmjs.com/package/react-selectify">
+    <img alt="Package Version" src="https://img.shields.io/npm/v/react-selectify.svg?colorB=green" />
   </a>
-  <a href="https://www.npmjs.com/package/use-selectify">
-    <img alt="NPM Downloads" src="https://badgen.net/npm/dm/use-selectify" />
+  <a href="https://www.npmjs.com/package/react-selectify">
+    <img alt="NPM Downloads" src="https://badgen.net/npm/dm/react-selectify" />
   </a>
   <a href="https://twitter.com/meetgilberto">
     <img alt="Follow @meetgilberto on Twitter" src="https://img.shields.io/twitter/follow/meetgilberto.svg?style=social&label=Follow" />
@@ -29,11 +29,15 @@
 
 <br />
 
+> **Note**
+>
+> If you prefer a hook-based API check out [use-selectify](https://github.com/rortan134/use-selectify) instead. use-selectify uses a DOM manipulation approach and gives you full control of everything else. On the other hand, react-selectify was created to manage data structures and not directly manipulate elements.
+
 ## Introduction
 
 Drag interactions are one of the most challenging aspects of the web. Having complete control over the exact behavior of those interactions is essential, yet most available libraries out there still feel like they are not up to the task.
 
-Recognizing this need, I created `use-selectify` aiming to address those issues and provide a powerful starting point for drag interactions while still remaining a robust approach to complex selections of elements in a React application, all done through a hook.
+Recognizing this need, I created `react-selectify` aiming to address those issues and provide a powerful starting point for drag interactions while still remaining a robust approach to complex selections of elements in a React application.
 
 Demo & Examples: [useselectify.js.org](https://useselectify.js.org/)
 
@@ -41,7 +45,7 @@ Demo & Examples: [useselectify.js.org](https://useselectify.js.org/)
 
 ✅ Automatic window scrolling
 
-✅ Flexible and [lightweight](https://bundlephobia.com/package/use-selectify) (4kB gzipped)
+✅ Flexible and [lightweight](https://bundlephobia.com/package/react-selectify) (4kB gzipped)
 
 ✅ Accessible by default
 
@@ -57,16 +61,16 @@ Demo & Examples: [useselectify.js.org](https://useselectify.js.org/)
 
 ## Installation
 
-Install use-selectify from your terminal via npm or yarn.
-
 ```sh
-npm install use-selectify
+npm install react-selectify
 ```
 
-or
+```sh
+yarn add react-selectify
+```
 
 ```sh
-yarn add use-selectify
+pnpm add react-selectify
 ```
 
 ### Import it
@@ -74,7 +78,7 @@ yarn add use-selectify
 Import the `useSelectify` hook. Both default and named imports are supported.
 
 ```tsx
-import { useSelectify } from "use-selectify";
+import { useSelectify } from "react-selectify";
 ```
 
 ## Anatomy
@@ -124,7 +128,7 @@ Begin by defining the element that will contain the drag interaction, then rende
 
 ```tsx
 import * as React from "react";
-import { useSelectify } from "use-selectify";
+import { useSelectify } from "react-selectify";
 
 export default function App() {
     const selectionContainerRef = React.useRef(null);
@@ -148,7 +152,7 @@ By default every element inside the `selectionContainerRef` is a selectable elem
 
 ```tsx
 import * as React from "react";
-import { useSelectify } from "use-selectify";
+import { useSelectify } from "react-selectify";
 
 export default function App() {
     const selectionContainerRef = React.useRef(null);
@@ -247,7 +251,7 @@ We can check if an element is selected by passing the `selectedElements` down an
 
 ```tsx
 import * as React from "react";
-import { useSelectify } from "use-selectify";
+import { useSelectify } from "react-selectify";
 
 const data = [
     {
@@ -350,7 +354,7 @@ Use something like [react-device-detect](https://www.npmjs.com/package/react-dev
 ```tsx
 import * as React from "react";
 import { isMobile } from "react-device-detect";
-import { useSelectify } from "use-selectify";
+import { useSelectify } from "react-selectify";
 
 export default function App() {
     const selectionContainerRef = React.useRef(null);
@@ -481,7 +485,7 @@ export function App() {
 
 ## Accessibility (optional)
 
-By default use-selectify already follows [WAI-ARIA](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html) best practices. Though to ensure that drag interactions are as accessible as possible, we must consider the following aspects:
+By default react-selectify already follows [WAI-ARIA](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html) best practices. Though to ensure that drag interactions are as accessible as possible, we must consider the following aspects:
 
 1. Add ARIA attributes: To indicate to assistive technology users that the elements are available for selection, we can use an aria-label to each selectable element. This label should be descriptive and informative, indicating either the purpose of selecting that element or how to select it for screen readers. Additionally, we can use the aria-selected attribute to indicate when elements are selected:
 
@@ -522,16 +526,16 @@ Looking forward to seeing how this project and the community evolve and provide 
 
 ## Development
 
-1. Clone the repo into a public GitHub repository (or fork <https://github.com/rortan134/use-selectify/fork>).
+1. Clone the repo into a public GitHub repository (or fork <https://github.com/rortan134/react-selectify/fork>).
 
     ```sh
-    git clone https://github.com/rortan134/use-selectify.git
+    git clone https://github.com/rortan134/react-selectify.git
     ```
 
 2. Go to the project folder
 
     ```sh
-    cd use-selectify
+    cd react-selectify
     ```
 
 3. Install packages with yarn

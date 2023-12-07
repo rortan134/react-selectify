@@ -25,7 +25,7 @@ export default defineConfig((configEnv) => ({
       entry: resolve('src', 'index.ts'),
       name: 'useSelectify',
       formats: ['es', 'umd'],
-      fileName: (format) => `use-selectify.${format}.js`,
+      fileName: (format) => `react-selectify.${format}.js`,
     },
     rollupOptions: {
       external: [...Object.keys(packageJson.peerDependencies)],

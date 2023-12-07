@@ -1,7 +1,5 @@
 "use client";
 
-import "./style.css";
-
 import * as React from "react";
 
 import { useComposedRefs } from "./utils/composeRefs";
@@ -36,6 +34,8 @@ function hasNullProps(obj: Record<string, unknown>) {
         return false;
     });
 }
+
+const 
 
 /* -------------------------------------------------------------------------------------------------
  * SelectionLabel
@@ -742,7 +742,7 @@ function useSelectify<T extends HTMLElement>(
     const handleScroll = React.useCallback(() => {
         if (hideOnScroll) {
             if (autoScroll) {
-                console.error("use-selectify: hideOnScroll & autoScroll are not compatible.");
+                console.error("react-selectify: hideOnScroll & autoScroll are not compatible.");
             }
             cancelRectDraw();
         }
@@ -848,7 +848,7 @@ function useSelectify<T extends HTMLElement>(
                 consumerCallback?.();
 
                 if (event.defaultPrevented) {
-                    console.log("use-selectify: Event prevented, stopping execution.");
+                    console.log("react-selectify: Event prevented, stopping execution.");
                     return;
                 }
 
@@ -986,7 +986,7 @@ function useSelectify<T extends HTMLElement>(
             if (process.env.NODE_ENV === "development" && ref.current) {
                 if (ref.current.scrollWidth > ref.current.clientWidth && !autoScroll) {
                     console.warn(
-                        `use-selectify: <${ref.current.tagName}> can scroll but autoScroll is disabled. Users might not be able to scroll and select at the same time. 
+                        `react-selectify: <${ref.current.tagName}> can scroll but autoScroll is disabled. Users might not be able to scroll and select at the same time. 
                         Consider enabling autoScroll.`
                     );
                 }

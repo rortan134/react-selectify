@@ -236,7 +236,7 @@ importers:
       tinycolor2:
         specifier: ^1.6.0
         version: 1.6.0
-      use-selectify:
+      react-selectify:
         specifier: ^0.4.0
         version: link:..
       zod:

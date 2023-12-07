@@ -1,4 +1,6 @@
 dist
 coverage
 yarn.lock
-    
+.storybook
+.husky
+node_modules

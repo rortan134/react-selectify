@@ -9,14 +9,15 @@ storybook-static
 .DS_Store
 .idea
 .env
-.env.local
-.env.development
-.env.development.local
+.env.*local
 *.log
 yalc.lock
 .vercel/
+.cache
 build/
 dist/
+
+# Testing
 /test-results/
 /playwright-report/
 /blob-report/
